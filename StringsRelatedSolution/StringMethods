@@ -1,0 +1,153 @@
+contains()	-- checks whether the string contains a substring
+
+String str = "Hello, World!";
+boolean contains = str.contains("Hello");
+System.out.println(contains); // Output: true
+
+
+substring() --	returns the substring of the string
+
+String str = "Hello, World!";
+String sub = str.substring(7);
+System.out.println(sub); // Output: World!
+
+
+
+join() --	join the given strings using the delimiter
+
+String[] parts = {"Hello", "World"};
+String joined = String.join(", ", parts);
+System.out.println(joined); // Output: Hello, World
+
+
+replace() --	replaces the specified old character with the specified new character
+
+String str = "Hello, World!";
+String replaced = str.replace('o', '0');
+System.out.println(replaced); // Output: Hell0, W0rld!
+
+
+replaceAll() --	replaces all substrings matching the regex pattern
+
+String str = "Hello, World!";
+String replaced = str.replaceAll("[aeiou]", "*");
+System.out.println(replaced); // Output: H*ll*, W*rld!
+
+replaceFirst() --	replace the first matching substring
+
+String str = "Hello, World!";
+String replaced = str.replaceFirst("o", "0");
+System.out.println(replaced); // Output: Hell0, World!
+
+charAt()--returns the character present in the specified location
+
+String str = "Hello, World!";
+char ch = str.charAt(7);
+System.out.println(ch); // Output: W
+
+getBytes()--	converts the string to an array of bytes
+
+
+indexOf()--returns the position of the specified character in the string
+
+String str = "Hello, World!";
+int index = str.indexOf('W');
+System.out.println(index); // Output: 7
+
+compareTo()	--compares two strings in the dictionary order
+
+String str1 = "apple";
+String str2 = "banana";
+int result = str1.compareTo(str2);
+System.out.println(result); // Output: Negative value because "apple" comes before "banana" lexicographically.
+
+compareToIgnoreCase()--	compares two strings ignoring case differences
+
+String str1 = "Hello";
+String str2 = "hello";
+int result = str1.compareToIgnoreCase(str2);
+System.out.println(result); // Output: 0 because both strings are equal ignoring case.
+
+trim()	--removes any leading and trailing whitespaces
+
+String str = "   Hello, World!   ";
+String trimmed = str.trim();
+System.out.println(trimmed); // Output: "Hello, World!"
+
+format()--returns a formatted string
+
+String str = String.format("The value of pi is %.2f", Math.PI);
+System.out.println(str); // Output: "The value of pi is 3.14"
+
+split()	-- breaks the string into an array of strings
+
+String str = "Hello,World,Java";
+String[] parts = str.split(",");
+for (String part : parts) {
+    System.out.println(part);
+}
+// Output:
+// Hello
+// World
+// Java
+
+toLowerCase()--converts the string to lowercase
+
+
+toUpperCase()--converts the string to uppercase
+valueOf()--returns the string representation of the specified argument
+
+int num = 123;
+String str = String.valueOf(num);
+System.out.println(str); // Output: "123"
+
+toCharArray()--	converts the string to a char array
+
+matches()--checks whether the string matches the given regex
+
+String str = "Hello, World!";
+boolean matches = str.matches(".*World.*");
+System.out.println(matches); // Output: true
+
+startsWith()--	checks if the string begins with the given string
+
+String str = "Hello, World!";
+boolean startsWith = str.startsWith("Hello");
+System.out.println(startsWith); // Output: true
+
+endsWith()--	checks if the string ends with the given string
+
+String str = "Hello, World!";
+boolean endsWith = str.endsWith("World!");
+System.out.println(endsWith); // Output: true
+
+isEmpty()	--checks whether a string is empty of not
+
+String str1 = "";
+String str2 = "Hello";
+System.out.println(str1.isEmpty()); // Output: true
+System.out.println(str2.isEmpty()); // Output: false
+
+intern() --	returns the canonical representation of the string
+
+String str1 = new String("Hello");
+String str2 = str1.intern();
+System.out.println(str1 == str2); // Output: false
+
+contentEquals()---	checks whether the string is equal to charSequence
+
+String str = "Hello";
+CharSequence cs = new StringBuffer("Hello");
+System.out.println(str.contentEquals(cs)); // Output: true
+
+hashCode()	----returns a hash code for the string
+
+String str = "Hello";
+int hashCode = str.hashCode();
+System.out.println(hashCode); // Output: Some hash code value
+
+subSequence()	---returns a subsequence from the string
+
+String str = "Hello, World!";
+CharSequence subSequence = str.subSequence(7, 12);
+System.out.println(subSequence); // Output: World
